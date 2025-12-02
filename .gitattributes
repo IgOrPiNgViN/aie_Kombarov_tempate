@@ -1,0 +1,33 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Jupyter notebooks
+*.ipynb linguist-language=Python
+
+# Python
+*.py text diff=python
+
+# Data files
+*.csv text
+*.json text
+*.yaml text
+*.yml text
+
+# Markdown
+*.md text diff=markdown
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.pkl binary
+*.joblib binary
+*.h5 binary
+*.pt binary
+*.pth binary
+
+
+
