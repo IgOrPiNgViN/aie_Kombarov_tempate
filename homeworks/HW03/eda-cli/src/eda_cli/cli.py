@@ -70,6 +70,8 @@ def report(
     top_k_categories: int = typer.Option(5, help="Сколько top-значений выводить для категориальных признаков."),
     title: str = typer.Option("EDA-отчёт", help="Заголовок отчёта."),
     min_missing_share: float = typer.Option(0.1, help="Порог доли пропусков для выделения проблемных колонок."),
+    high_cardinality_threshold: int = typer.Option(50, help="Порог уникальных значений для высокой кардинальности."),
+    zero_share_threshold: float = typer.Option(0.5, help="Порог доли нулей в числовых колонках."),
 ) -> None:
     """
     Сгенерировать полный EDA-отчёт:
@@ -97,7 +99,11 @@ def report(
     top_cats = top_categories(df, top_k=top_k_categories)
 
     # 2. Качество в целом (передаём df для новых эвристик)
-    quality_flags = compute_quality_flags(summary, missing_df, df=df)
+    quality_flags = compute_quality_flags(
+        summary, missing_df, df=df,
+        high_cardinality_threshold=high_cardinality_threshold,
+        zero_share_threshold=zero_share_threshold,
+    )
 
     # 3. Определяем проблемные колонки по пропускам
     problematic_columns = []
@@ -122,7 +128,9 @@ def report(
         f.write("## Параметры генерации отчёта\n\n")
         f.write(f"- Максимум гистограмм: **{max_hist_columns}**\n")
         f.write(f"- Top-K категорий: **{top_k_categories}**\n")
-        f.write(f"- Порог пропусков: **{min_missing_share:.0%}**\n\n")
+        f.write(f"- Порог пропусков: **{min_missing_share:.0%}**\n")
+        f.write(f"- Порог высокой кардинальности: **{high_cardinality_threshold}** уникальных значений\n")
+        f.write(f"- Порог доли нулей: **{zero_share_threshold:.0%}**\n\n")
 
         f.write("## Качество данных (эвристики)\n\n")
         f.write(f"- Оценка качества: **{quality_flags['quality_score']:.2f}**\n")
@@ -137,7 +145,7 @@ def report(
             f.write(f" ({', '.join(quality_flags['constant_columns'])})")
         f.write("\n")
         
-        f.write(f"- Высокая кардинальность категорий: **{quality_flags['has_high_cardinality_categoricals']}**")
+        f.write(f"- Высокая кардинальность категорий (порог >{quality_flags['high_cardinality_threshold']}): **{quality_flags['has_high_cardinality_categoricals']}**")
         if quality_flags['high_cardinality_columns']:
             f.write(f" ({', '.join(quality_flags['high_cardinality_columns'])})")
         f.write("\n")
@@ -147,7 +155,7 @@ def report(
             f.write(f" ({', '.join(quality_flags['suspicious_id_columns'])})")
         f.write("\n")
         
-        f.write(f"- Много нулевых значений: **{quality_flags['has_many_zero_values']}**")
+        f.write(f"- Много нулевых значений (порог >{quality_flags['zero_share_threshold']:.0%}): **{quality_flags['has_many_zero_values']}**")
         if quality_flags['high_zero_columns']:
             f.write(f" ({', '.join(quality_flags['high_zero_columns'])})")
         f.write("\n\n")

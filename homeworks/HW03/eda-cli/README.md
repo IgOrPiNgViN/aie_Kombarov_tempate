@@ -57,6 +57,8 @@ uv run eda-cli report data/example.csv --out-dir reports
 | `--top-k-categories` | `5` | Сколько top-значений выводить для категориальных признаков |
 | `--title` | `EDA-отчёт` | Заголовок отчёта в `report.md` |
 | `--min-missing-share` | `0.1` | Порог доли пропусков для выделения проблемных колонок |
+| `--high-cardinality-threshold` | `50` | Порог уникальных значений для определения высокой кардинальности категориальных признаков |
+| `--zero-share-threshold` | `0.5` | Порог доли нулей в числовых колонках для эвристики «много нулей» |
 
 #### Пример вызова с новыми параметрами
 
@@ -66,7 +68,9 @@ uv run eda-cli report data/example.csv \
     --title "Анализ пользовательских данных" \
     --top-k-categories 10 \
     --min-missing-share 0.05 \
-    --max-hist-columns 8
+    --max-hist-columns 8 \
+    --high-cardinality-threshold 100 \
+    --zero-share-threshold 0.3
 ```
 
 ### Выходные артефакты
@@ -95,9 +99,9 @@ uv run eda-cli report data/example.csv \
 ### Новые эвристики (HW03)
 
 - `has_constant_columns` – есть колонки, где все значения одинаковые;
-- `has_high_cardinality_categoricals` – есть категориальные признаки с очень большим числом уникальных значений (порог: 50);
+- `has_high_cardinality_categoricals` – есть категориальные признаки с очень большим числом уникальных значений (настраивается через `--high-cardinality-threshold`, по умолчанию: 50);
 - `has_suspicious_id_duplicates` – обнаружены дубликаты в колонках с «id» в названии;
-- `has_many_zero_values` – в числовых колонках большая доля нулей (порог: 50%).
+- `has_many_zero_values` – в числовых колонках большая доля нулей (настраивается через `--zero-share-threshold`, по умолчанию: 50%).
 
 Все эвристики учитываются в расчёте интегрального показателя `quality_score`.
 
