@@ -1,0 +1,14 @@
+{
+  "dataset": "dataset-03",
+  "model_name": "RandomForest",
+  "best_params": {
+    "max_depth": 10,
+    "min_samples_leaf": 2,
+    "n_estimators": 100
+  },
+  "metrics_on_test": {
+    "accuracy": 0.8546666666666667,
+    "f1_macro": 0.8094966098324763,
+    "roc_auc_ovr": 0.9453856888354121
+  }
+}
