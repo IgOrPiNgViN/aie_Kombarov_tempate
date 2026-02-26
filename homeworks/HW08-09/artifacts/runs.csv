@@ -1,0 +1,8 @@
+experiment_id,dataset,seed,model_summary,optimizer,lr,momentum,weight_decay,epochs_trained,best_val_accuracy,best_val_loss
+E1,EMNIST_balanced,42,"[256,128]/ReLU/no_reg",Adam,0.001,0,0,15,0.7746,0.7372
+E2,EMNIST_balanced,42,"[256,128]/ReLU/Dropout(p=0.3)",Adam,0.001,0,0,15,0.7756,0.7249
+E3,EMNIST_balanced,42,"[256,128]/ReLU/BatchNorm",Adam,0.001,0,0,15,0.7928,0.6546
+E4,EMNIST_balanced,42,"[256,128]/ReLU/BatchNorm",Adam,0.001,0,0,14,0.7928,0.6546
+O1,EMNIST_balanced,42,"[256,128]/ReLU/BatchNorm",Adam,0.1,0,0,6,0.7362,0.8817
+O2,EMNIST_balanced,42,"[256,128]/ReLU/BatchNorm",Adam,1e-05,0,0,6,0.2754,3.2228
+O3,EMNIST_balanced,42,"[256,128]/ReLU/BatchNorm",SGD,0.01,0.9,0.0001,10,0.785,0.6872
