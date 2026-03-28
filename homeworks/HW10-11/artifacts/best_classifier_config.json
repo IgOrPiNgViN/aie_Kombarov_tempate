@@ -1,0 +1,13 @@
+{
+  "dataset": "CIFAR100",
+  "seed": 42,
+  "num_classes": 100,
+  "model": "ResNet18 (finetune layer4+fc)",
+  "experiment_id": "C4",
+  "optimizer": "Adam",
+  "lr": 0.0001,
+  "batch_size": 128,
+  "epochs_trained": 6,
+  "best_val_accuracy": 0.4925,
+  "test_accuracy": 0.4852
+}

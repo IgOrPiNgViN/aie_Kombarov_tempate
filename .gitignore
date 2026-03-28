@@ -116,5 +116,18 @@ Thumbs.db
 *.log
 logs/
 
+# Папка «дз» в корне репозитория (кириллица: д-з) — материалы семинаров, не в git
+/дз/
+дз/
+
+# Тяжёлые данные и чекпойнты домашних работ
+homeworks/HW10-11/data/
+homeworks/HW13/artifacts/checkpoints/
+
+# Разрешить явно небольшие файлы ДЗ, попадающие под глобальные *.csv / *.pt
+!homeworks/HW12/S12-hw-dataset.csv
+!homeworks/HW12/artifacts/runs.csv
+!homeworks/HW12/artifacts/best_gru.pt
+!homeworks/HW13/artifacts/sample_predictions.csv
 
 

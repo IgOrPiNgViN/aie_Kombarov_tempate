@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "window_size": 48,
+  "hidden_size": 48,
+  "num_layers": 1,
+  "batch_size": 64,
+  "lr": 0.001,
+  "max_epochs": 80,
+  "optimizer": "Adam",
+  "scaler_y": "StandardScaler on train target only",
+  "device": "cpu",
+  "best_val_mae_gru": 4.927534103393555,
+  "dataset": "S12-hw-dataset.csv"
+}
