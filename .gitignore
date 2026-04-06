@@ -121,6 +121,7 @@ logs/
 дз/
 
 # Тяжёлые данные и чекпойнты домашних работ
+homeworks/HW08-09/data/
 homeworks/HW10-11/data/
 homeworks/HW13/artifacts/checkpoints/
 
@@ -129,5 +130,11 @@ homeworks/HW13/artifacts/checkpoints/
 !homeworks/HW12/artifacts/runs.csv
 !homeworks/HW12/artifacts/best_gru.pt
 !homeworks/HW13/artifacts/sample_predictions.csv
+
+# HW14: CSV в artifacts нужны для сдачи (иначе перекрываются правилом *.csv выше)
+!homeworks/HW14/artifacts/*.csv
+
+# HW14: кэш эмбеддингов после прогона ноутбука (пересоздаётся локально)
+homeworks/HW14/artifacts/emb_*.npz
 
 
