@@ -137,4 +137,18 @@ homeworks/HW13/artifacts/checkpoints/
 # HW14: кэш эмбеддингов после прогона ноутбука (пересоздаётся локально)
 homeworks/HW14/artifacts/emb_*.npz
 
+# --- Campus Search (project/) ---
+# Артефакты проекта коммитим (индекс + CSV экспериментов + графики)
+# Исключения после глобального *.csv выше
+!project/artifacts/
+!project/artifacts/**
+!project/artifacts/**/*.csv
+!project/artifacts/figures/
+!project/artifacts/figures/**
+
+# Временные и локальные файлы (после un-ignore, чтобы снова исключить)
+project/artifacts/_tmp*/
+project/pip_install.log
+project/response.json
+project/response_*.json
 

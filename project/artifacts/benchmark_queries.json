@@ -1,0 +1,62 @@
+[
+  {
+    "query": "как получить справку об обучении?",
+    "relevant_doc_ids": ["campus_01"],
+    "query_type": "keyword"
+  },
+  {
+    "query": "где заказать документ подтверждающий что я учусь в вузе",
+    "relevant_doc_ids": ["campus_01"],
+    "query_type": "paraphrase"
+  },
+  {
+    "query": "правила проживания в общежитии комендантский час",
+    "relevant_doc_ids": ["campus_04"],
+    "query_type": "keyword"
+  },
+  {
+    "query": "во сколько нельзя заходить в общежитие ночью",
+    "relevant_doc_ids": ["campus_04"],
+    "query_type": "paraphrase"
+  },
+  {
+    "query": "социальная стипендия документы",
+    "relevant_doc_ids": ["campus_06"],
+    "query_type": "keyword"
+  },
+  {
+    "query": "льготная выплата для малообеспеченных какие справки нужны",
+    "relevant_doc_ids": ["campus_06"],
+    "query_type": "paraphrase"
+  },
+  {
+    "query": "режим работы библиотеки воскресенье",
+    "relevant_doc_ids": ["campus_07"],
+    "query_type": "keyword"
+  },
+  {
+    "query": "открыта ли научная библиотека в воскресенье",
+    "relevant_doc_ids": ["campus_07"],
+    "query_type": "paraphrase"
+  },
+  {
+    "query": "как подключиться к wifi eduroam",
+    "relevant_doc_ids": ["campus_12"],
+    "query_type": "keyword"
+  },
+  {
+    "query": "беспроводной интернет кампуса настройка eduroam",
+    "relevant_doc_ids": ["campus_12"],
+    "query_type": "paraphrase"
+  },
+  {
+    "query": "академический отпуск по болезни",
+    "relevant_doc_ids": ["campus_13"],
+    "query_type": "keyword"
+  },
+  {
+    "query": "прервать обучение из-за здоровья как оформить",
+    "relevant_doc_ids": ["campus_13"],
+    "query_type": "paraphrase"
+  }
+]

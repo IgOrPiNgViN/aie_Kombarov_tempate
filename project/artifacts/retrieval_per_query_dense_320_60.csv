@@ -1,0 +1,13 @@
+query,query_type,relevant_doc_ids,retrieved_doc_ids,hit@5,mrr@5,retriever,chunk_size,chunk_overlap
+как получить справку об обучении?,keyword,['campus_01'],"['campus_01', 'campus_15', 'campus_02', 'campus_13', 'campus_09']",1,1.0,dense,320,60
+где заказать документ подтверждающий что я учусь в вузе,paraphrase,['campus_01'],"['campus_01', 'campus_14', 'campus_17', 'campus_03', 'campus_02']",1,1.0,dense,320,60
+правила проживания в общежитии комендантский час,keyword,['campus_04'],"['campus_04', 'campus_03', 'campus_17', 'campus_17', 'campus_13']",1,1.0,dense,320,60
+во сколько нельзя заходить в общежитие ночью,paraphrase,['campus_04'],"['campus_04', 'campus_17', 'campus_03', 'campus_07', 'campus_11']",1,1.0,dense,320,60
+социальная стипендия документы,keyword,['campus_06'],"['campus_06', 'campus_05', 'campus_13', 'campus_08', 'campus_02']",1,1.0,dense,320,60
+льготная выплата для малообеспеченных какие справки нужны,paraphrase,['campus_06'],"['campus_06', 'campus_06', 'campus_13', 'campus_05', 'campus_05']",1,1.0,dense,320,60
+режим работы библиотеки воскресенье,keyword,['campus_07'],"['campus_07', 'campus_18', 'campus_14', 'campus_05', 'campus_11']",1,1.0,dense,320,60
+открыта ли научная библиотека в воскресенье,paraphrase,['campus_07'],"['campus_07', 'campus_08', 'campus_18', 'campus_10', 'campus_11']",1,1.0,dense,320,60
+как подключиться к wifi eduroam,keyword,['campus_12'],"['campus_12', 'campus_08', 'campus_04', 'campus_17', 'campus_12']",1,1.0,dense,320,60
+беспроводной интернет кампуса настройка eduroam,paraphrase,['campus_12'],"['campus_12', 'campus_08', 'campus_03', 'campus_11', 'campus_05']",1,1.0,dense,320,60
+академический отпуск по болезни,keyword,['campus_13'],"['campus_13', 'campus_09', 'campus_03', 'campus_07', 'campus_05']",1,1.0,dense,320,60
+прервать обучение из-за здоровья как оформить,paraphrase,['campus_13'],"['campus_09', 'campus_13', 'campus_14', 'campus_06', 'campus_01']",1,0.5,dense,320,60

@@ -1,0 +1,8 @@
+{
+  "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "num_chunks": 27,
+  "faiss": {
+    "type": "IndexFlatIP",
+    "metric": "cosine_via_l2_norm"
+  }
+}

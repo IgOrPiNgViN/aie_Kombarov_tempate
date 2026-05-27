@@ -1,0 +1,8 @@
+{
+  "hit@5": 1.0,
+  "mrr@5": 1.0,
+  "retriever": "dense",
+  "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "chunk_size": 320,
+  "chunk_overlap": 60
+}
